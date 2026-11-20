@@ -9,12 +9,13 @@ Vídeo vertical 1080x1920, 30 fps, ~80 s, narração pt-BR + legenda queimada + 
 
 ## Como gerar de novo
 ```
-pip install kokoro-onnx soundfile skia-python numpy   # + ffmpeg, fontes Inter e Noto Color Emoji
-# modelos do Kokoro em build/models/ (kokoro-v1.0.onnx, voices-v1.0.bin — releases do kokoro-onnx no GitHub)
+pip install edge-tts soundfile skia-python numpy   # + ffmpeg, fontes Inter e Noto Color Emoji
+# a rede precisa alcançar speech.platform.bing.com (voz neural pt-BR-AntonioNeural)
 ./build.sh
 ```
 - `script.py` — roteiro: texto da legenda e texto falado (normalizado p/ o TTS) por cena
-- `tts.py` — narração (Kokoro, voz `pm_alex`) e linha do tempo `build/timeline.json`
+- `tts.py` — narração (Microsoft pt-BR-AntonioNeural, uma fala por cena; pausas longas encurtadas) e linha do tempo `build/timeline.json`.
+  Ajustes: `RATE=+18%` (velocidade), `PITCH=+0Hz`; `ENGINE=kokoro` usa a voz local antiga.
 - `music.py` — trilha instrumental sintetizada (125 BPM, Lá menor)
 - `mix.sh` — ducking da trilha sob a voz, normalização −14 LUFS
 - `render.py` — animação (Skia) → ffmpeg; `python3 render.py stills` gera PNGs de conferência
