@@ -9,7 +9,7 @@ world, deep blurred backgrounds, lively movement, better character shapes (heads
 structure). Story, script, characters and voice stay OURS: derive general rules and numbers, never trace or copy his
 specific characters, props or shots.
 
-## Reference material (private study only: never upload, publish or send any of it anywhere)
+## Reference material (the user's own channel; kept in this repository)
 - 20 reference shorts, 720x1280, 30 fps: `references/vids/NN_<id>.mp4` (01 = newest).
 - Contact sheets, each = 2 s = 60 frames: `references/measure/NN_<id>_sheets/sNN.jpg`.
 - Earlier summary: `references/STYLE_BIBLE.md`. Quick overview sheet: `references/refs_sheet.jpg`.
